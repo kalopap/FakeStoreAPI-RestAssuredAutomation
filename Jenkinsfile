@@ -1,6 +1,10 @@
 pipeline{
     agent any
 
+    triggers{
+        cron('H 8 * * 1-5')         //Mon - Fri at 8 pm
+    }
+
     environment{
         PATH = "/usr/local/bin:${env.PATH}"
     }
